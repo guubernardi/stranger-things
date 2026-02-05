@@ -1,0 +1,511 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+@font-face {
+font-family: 'Benguiat';
+src: url(fonts/Benguiat\ Bold.ttf);
+}
+
+body {
+background-color: #0C0102;
+font-family: 'Poppins', sans-serif;
+color: rgba(255, 255, 255, 0.9);
+overflow-x: hidden;
+}
+
+#preLoader{
+    width: 100%;
+    height: 100vh;
+    background-color: #0c0102;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; 
+  
+    svg{
+      width: 40vw;
+      height: auto;
+  
+      path{
+        fill: rgba(168, 19, 19, 0.364);
+        stroke: rgb(168, 19, 19);
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 700;
+      }
+    }
+}
+
+button {
+font-family: 'Poppins', sans-serif;
+}
+
+header {
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 4vw;
+position: absolute;
+z-index: 9;
+}
+
+.hero {
+height: 100vh;
+background-position: 50% 0%;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 7vw 7vw 7vw;
+position: relative;
+overflow: hidden; 
+}
+
+.hero .bg {
+position: absolute;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+object-fit: cover; 
+}
+
+picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+}
+
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0C0102 100%);
+z-index: 2;
+pointer-events: none;
+}
+
+.esquerda,
+.direita {
+position: relative;
+z-index: 3;
+}
+
+.esquerda {
+width: 30%;
+}
+
+.esquerda h3 {
+font-size: 24px;
+font-weight: 500;
+letter-spacing: 4px;
+}
+
+.esquerda h1 {
+font-size: 3.7vw;
+font-family: 'Benguiat', sans-serif;
+}
+
+.direita {
+display: flex;
+flex-direction: column;
+align-items: end;
+width: 30%;
+}
+
+.direita p {
+font-size: 2vw;
+text-align: end;
+margin-bottom: 32px;
+}
+
+.botao {
+background-color: transparent;
+color: white;
+font-size: 16px;
+display: flex;
+gap: 16px;
+border: none;
+outline: none;
+border-bottom: 1px solid white;
+padding: 16px 0;
+}
+
+.botao:hover {
+cursor: pointer;
+}
+
+section {
+width: 100%;
+display: flex;
+padding: 7vw;
+}
+
+.bgMonstro {
+background-image: url(images/bg-sec2.webp);
+background-position: center;
+background-size: cover;
+position: relative;
+}
+
+.cidade {
+flex-direction: column;
+padding: 0 7vw 7vw 7vw;
+}
+
+.titulos-cidade {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+h2 {
+font-size: 40px;
+font-weight: 500;
+}
+
+.cards {
+margin-top: 52px;
+display: flex;
+justify-content: space-between;
+}
+
+.card {
+background-image: url(images/card1.webp);
+width: 32%;
+aspect-ratio: 16/9;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: end;
+justify-content: space-between;
+padding: 20px;
+}
+
+.card:nth-child(2) {
+background-image: url(images/card2.webp);
+}
+
+.card:nth-child(3) {
+background-image: url(images/card3.webp);
+}
+
+@media (max-width: 1400px) {
+.card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+}
+}
+
+.secaoDepoimentos {
+flex-direction: column;
+}
+
+.logo {
+display: flex;
+justify-content: space-between;
+align-items: end;
+}
+
+.depoimentos {
+display: flex;
+justify-content: space-between;
+margin-top: 62px;
+}
+
+.depoimento {
+width: 31%;
+}
+
+.secaoObrigado {
+flex-direction: column;
+display: flex;
+position: relative;
+align-items: center;
+height: 20px;
+}
+
+.secaoObrigado h2 {
+margin-bottom: 40px;
+}
+
+ul {
+list-style: none;
+display: flex;
+width: 100%;
+justify-content: space-between;
+z-index: 12;
+}
+
+footer {
+width: 100%;
+display: flex;
+flex-direction: column;
+background-image: url(images/bg-footer.webp);
+background-position: center;
+background-size: cover;
+}
+
+.conteudoFooter {
+display: flex;
+width: 100%;
+padding: 7vw;
+}
+
+.logoFooter {
+width: 30%;
+}
+
+.logoFooter h3 {
+font-size: 24px;
+font-weight: 500;
+letter-spacing: 4px;
+}
+
+.logoFooter h2 {
+font-size: 3.7vw;
+font-family: 'Benguiat', sans-serif;
+}
+
+.secoesFooter {
+display: flex;
+flex: 1;
+justify-content: end;
+gap: 6%;
+align-items: end;
+}
+
+.secoesFooter h3 {
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 18px;
+}
+
+.social {
+display: flex;
+flex-direction: column;
+}
+
+.institucional {
+display: flex;
+flex-direction: column;
+}
+
+nav {
+display: flex;
+flex-direction: column;
+}
+
+.logotiposFooter {
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 0 4vw;
+}
+
+.textoInfinito {
+display: flex;
+justify-content: center;
+width: max-content;
+}
+
+.textoInfinito h3 {
+font-size: 12vw;
+font-family: 'Benguiat', sans-serif;
+mix-blend-mode: color-dodge;
+color: rgb(191, 191, 191);
+animation: textoInfinito 10s infinite linear;
+padding-left: 8vw;
+}
+
+@keyframes textoInfinito {
+100% {
+    transform: translateX(-100%);
+}
+}
+
+    @media (max-width: 1500px) {
+        .cidade {
+            padding: 4vw;
+        }
+        }
+
+        @media (max-width: 600px) {
+        section {
+            padding: 4vw;
+        }
+
+        h2 {
+            font-size: 6vw;
+        }
+
+        header h2 {
+            font-size: 28px;
+        }
+
+        .hero {
+            flex-direction: column;
+            padding: 26% 4vw 0;
+        }
+
+        .esquerda,
+        .direita {
+            width: 100%;
+        }
+
+        .esquerda h3,
+        .esquerda h1 {
+            text-align: center;
+        }
+
+        .esquerda h1 {
+            font-size: 12vw;
+        }
+
+        .direita {
+            align-items: start;
+        }
+
+        .direita p {
+            font-size: 5.5vw;
+            text-align: start;
+        }
+
+        .cidade {
+            margin-top: 80px;
+        }
+
+        .cidade button {
+            display: none;
+        }
+
+        .cards {
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+        .secaoDepoimentos .logo img {
+            width: 30%;
+        }
+
+        .secaoDepoimentos .depoimentos {
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .secaoDepoimentos .depoimento {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .secaoDepoimentos .depoimentos img {
+            width: 30%;
+            margin: 0 auto 24px;
+        }
+
+        .secaoObrigado {
+            margin: 40px 0 30px;
+        }
+
+        .secaoObrigado h2 {
+            text-align: center;
+        }
+
+        .secaoObrigado ul {
+            width: max-content;
+            gap: 32px;
+            animation: textoInfinitoMobile 7s infinite linear;
+        }
+
+        @keyframes textoInfinitoMobile {
+            100% {
+            transform: translateX(-100%);
+            }
+        }
+
+        footer {
+            padding: 40px;
+        }
+
+        footer .conteudoFooter {
+            padding: 4vw;
+            flex-direction: column;
+        }
+
+        footer .logoFooter {
+            width: 100%;
+        }
+
+        footer .logoFooter h3,
+        footer .logoFooter h2 {
+            text-align: center;
+        }
+
+        footer .logoFooter h2 {
+            font-size: 8vw;
+        }
+
+        footer .secoesFooter {
+            flex-wrap: wrap;
+        }
+
+        footer .social {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0 32px;
+        }
+
+        footer .parceiro {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        footer .parceiro h3 {
+            text-align: center;
+        }
+
+        footer .parceiro img {
+            width: 70%;
+            margin: 2px auto;
+            align-items: center;
+            display: flex;
+        }
+
+        footer .institucional {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0 12px;
+        }
+
+        footer nav {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
