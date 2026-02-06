@@ -1,4 +1,4 @@
-# Stranger Things: The Experience — Refeito (Front-end)
+# Stranger Things: The Experience - Refeito (Front-end)
 
 Recriação / redesign (não-oficial) da landing page do **Stranger Things: The Experience**, feita com foco em **UI + animações** usando **GSAP**.
 
@@ -37,3 +37,4 @@ Recriação / redesign (não-oficial) da landing page do **Stranger Things: The 
 
 ```bash
 npx serve .
+
