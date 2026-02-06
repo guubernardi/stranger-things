@@ -34,7 +34,3 @@ Recriação / redesign (não-oficial) da landing page do **Stranger Things: The 
 1. Clone o repositório
 2. Abra o `index.html` 
 3. Use a extensão **Live Server** para rodar
-
-```bash
-npx serve .
-
